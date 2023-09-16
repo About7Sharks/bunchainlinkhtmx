@@ -1,9 +1,13 @@
 # Elysia with Bun runtime
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
+## Docker Setup
+To build the docker image run:
 ```bash
-bun create elysia ./elysia-example
+docker build -t bun-app .
+```
+To run the docker image run:
+```bash
+docker run -d -p 8080:8080 bun-app
 ```
 
 ## Development
@@ -12,4 +16,4 @@ To start the development server run:
 bun run dev
 ```
 
-Open http://localhost:3000/ with your browser to see the result.
+Open http://localhost:8080/ with your browser to see the result.
