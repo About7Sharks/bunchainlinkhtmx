@@ -13,7 +13,7 @@ docker run -d -p 8080:8080 bun-app
 ## Development
 To start the development server run:
 ```bash
-bun run dev
+bun --bun run --watch src/index.tsx
 ```
 
 Open http://localhost:8080/ with your browser to see the result.
