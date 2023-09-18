@@ -1,12 +1,14 @@
 // app.tsx
 import { Elysia } from "elysia";
 import { html } from "@elysiajs/html";
+import { swagger } from '@elysiajs/swagger'
 import { getPrices } from "../util/price";
 import { BASEHTML } from "./html";
 console.log("STARTING SERVER");
 
 const prices = await getPrices();
 const app = new Elysia()
+  .use(swagger())
   .use(html())
   .get("/", ({ html }) =>
     html(
